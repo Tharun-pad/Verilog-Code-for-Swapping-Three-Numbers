@@ -1,11 +1,14 @@
 # Verilog-Code-for-Swapping-Three-Numbers
-Aim
+
+## Aim
+
 To design and simulate a Verilog HDL code for swapping the values of three numbers without using any temporary variables, and verify the correctness of the swapping operation through a testbench using the Vivado 2023.1 simulation environment.
 
-Apparatus Required
+## Apparatus Required
+
 Vivado 2023.1 or equivalent Verilog simulation tool.
 
-Procedure
+## Procedure
 Launch Vivado 2023.1:
 
 Open Vivado and create a new project.
@@ -28,9 +31,10 @@ Save and Document Results:
 
 Capture the waveform output and include the results in your report for verification.
 
-Verilog Code:
-
+## Verilog Code for Swapping three numbers
+```verilog
 // swap_three_numbers.v
+
 module swap_three_numbers (
     input wire [7:0] a_in,
     input wire [7:0] b_in,
@@ -38,21 +42,23 @@ module swap_three_numbers (
     output reg [7:0] a_out,
     output reg [7:0] b_out,
     output reg [7:0] c_out
-);
+    );
     always @(*) begin
         a_out = b_in; // Swap: a = b
         b_out = c_in; // Swap: b = c
         c_out = a_in; // Swap: c = a
     end
-endmodule
-
+    endmodule
+```
+## Simulated Output
+![Screenshot 2025-04-19 135348](https://github.com/user-attachments/assets/d7629b25-ab36-4cfc-b221-5bbfe989159c)
 
 Testbench for Swapping Three Numbers:
+```verilog
+    // swap_three_numbers_tb.v
+    `timescale 1ns / 1ps
 
-// swap_three_numbers_tb.v
-`timescale 1ns / 1ps
-
-module swap_three_numbers_tb;
+    module swap_three_numbers_tb;
 
     // Inputs
     reg [7:0] a;
@@ -92,7 +98,11 @@ module swap_three_numbers_tb;
         // Stop the simulation
         #10 $stop;
     end
-endmodule
+    endmodule
+```
+## Simulated Output
+![Screenshot 2025-04-19 140135](https://github.com/user-attachments/assets/6aa8f8ae-7f86-4c2f-a679-1f0b41053e94)
+
 
 Conclusion
 In this experiment, a Verilog HDL code for swapping three numbers was designed and successfully simulated. The testbench verified the swapping operation, showing that the values of three input numbers (a, b, and c) were swapped correctly without the use of temporary variables. This experiment demonstrated the effectiveness of Verilog in implementing logical operations and control mechanisms such as swapping values. The simulation results confirm the correct functionality of the design.
