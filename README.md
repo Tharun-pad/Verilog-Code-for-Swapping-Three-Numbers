@@ -53,7 +53,7 @@ module swap_three_numbers (
 ## Simulated Output
 ![Screenshot 2025-04-19 135348](https://github.com/user-attachments/assets/d7629b25-ab36-4cfc-b221-5bbfe989159c)
 
-Testbench for Swapping Three Numbers:
+## Verilog Code Testbench for Swapping Three Numbers:
 ```verilog
     // swap_three_numbers_tb.v
     `timescale 1ns / 1ps
